@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kevin Ryu | Demo Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f8fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    nav {
+      width: min(900px, 92%);
+      height: 64px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav h2 {
+      font-size: 1.1rem;
+    }
+
+    nav a {
+      color: #4b5563;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    .container {
+      width: min(900px, 92%);
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 90px 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      margin-bottom: 16px;
+      color: #111827;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 0 auto 28px;
+      color: #6b7280;
+      font-size: 1.05rem;
+    }
+
+    .button {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .button:hover {
+      background: #1d4ed8;
+    }
+
+    section {
+      padding: 50px 0;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 14px;
+      color: #111827;
+    }
+
+    .section-text {
+      color: #6b7280;
+      margin-bottom: 24px;
+      max-width: 650px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .card p {
+      color: #6b7280;
+      font-size: 0.95rem;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 999px;
+      padding: 9px 14px;
+      color: #4b5563;
+    }
+
+    .contact {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 20px;
+      padding: 32px;
+      text-align: center;
+    }
+
+    .contact p {
+      color: #6b7280;
+      margin-bottom: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 760px) {
+      nav {
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        height: 82px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h2>Kevin Ryu</h2>
+      <div>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <h1>Hello, I’m Kevin.</h1>
+      <p>
+        This is a simple demo portfolio website. I’m an Electrical Engineering student
+        interested in technology, problem-solving, and building useful projects.
+      </p>
+      <a class="button" href="#projects">View My Work</a>
+    </section>
+
+    <section id="about" class="container">
+      <h2>About Me</h2>
+      <p class="section-text">
+        I like learning new things, working on hands-on projects, and improving my technical skills.
+        This website is a simple place to introduce myself and share a few examples of my work.
+      </p>
+    </section>
+
+    <section id="projects" class="container">
+      <h2>Projects</h2>
+      <p class="section-text">
+        Here are a few sample project cards. You can replace these later with real descriptions,
+        images, or links.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Project One</h3>
+          <p>A short description of a project can go here.</p>
+        </div>
+
+        <div class="card">
+          <h3>Project Two</h3>
+          <p>A short description of another project can go here.</p>
+        </div>
+
+        <div class="card">
+          <h3>Project Three</h3>
+          <p>A short description of a third project can go here.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Skills</h2>
+      <p class="section-text">
+        These are simple placeholder skills. You can edit them anytime.
+      </p>
+
+      <div class="skills">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">Python</span>
+        <span class="skill">MATLAB</span>
+        <span class="skill">GitHub</span>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <div class="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out.</p>
+        <a class="button" href="mailto:kevinryu247@gmail.com">Email Me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Kevin Ryu. Demo Portfolio.
+  </footer>
+</body>
+</html>
